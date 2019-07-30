@@ -61,8 +61,9 @@
                 </div>
                 <ul class="actions">
                     <li><input type="submit" class="button special" value="Guardar" /></li>
-                    <a href="{{URL::action('LibroController@show',$libro->id_libro)}}" style="color:black"><button class="alt">
-                Regresar</button></a>
+                    <li><input type="reset" value="Limpiar" class="alt" /></li>
+                    <a href="{{URL::action('LibroController@show',$libro->id_libro)}}" style="color:black"><button class="button2">
+                Volver</button></a>
                 </ul>
             </div>
         </form>

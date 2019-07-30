@@ -9,7 +9,7 @@
     </header>
     <div class="center">
         	
-    {!!Form::open(['route'=>'biblioteca.store','method'=>'POST','autocomplete'=>'off'])!!}
+    {!!Form::open(['route'=>'libro.store','method'=>'POST','autocomplete'=>'off'])!!}
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
                     <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" required/>

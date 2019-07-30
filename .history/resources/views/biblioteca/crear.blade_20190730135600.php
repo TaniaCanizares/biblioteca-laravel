@@ -9,7 +9,7 @@
     </header>
     <div class="center">
         	
-    {!!Form::open(['route'=>'biblioteca.store','method'=>'POST','autocomplete'=>'off'])!!}
+        <form method="post" action="/biblioteca">
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
                     <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" required/>
@@ -44,20 +44,26 @@
                     <input type="text" name="unidades_disponible" id="unidades_disponible" value="" placeholder="Unidades disponibles" 
                     pattern="[0-9\s]*" title="Ingresa solamente números" required/>
                 </div>               
-                <div class="6u 12u$(xsmall)">
-                    <input type="text" class="textbox" name="resena" id="resena" value="" placeholder="Ingresa una breve reseña"
-                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.;,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+                <div class="12u$">
+                    <textarea name="resena" id="resena" placeholder="Ingresa una breve reseña" rows="3" required></textarea>
                 </div>
-                <div class="6u 12u$(xsmall)">
-                    <input type="text" class="textbox" name="imagen" id="imagen" value="" placeholder="Ingresa la url de la imagen"
-                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s/._-]*" title="No se aceptan caracteres especiales">
+                <div class="12u$">
+                    <label class="custom-file">
+                        <label for="">Selecciona una imagen</label> 
+                        <input accept="image/*" type="file" id="imagen" name="imagen" class="custom-file-input" placeholde="Sube una imagen" required>             
+                        @if($errors->has('imagen'))
+                            <p>{{ $errors->first('imagen')}}</p> 
+                        @endif
+                        <span class="custom-file-control"></span>
+                    </label>
                 </div>
+
                 <ul class="actions">
                     <li><input type="submit" class="button special" value="Guardar" /></li>
                     <li><input type="reset" value="Limpiar" class="alt" /></li>
                 </ul>
-            </div>
-        {!!Form::close()!!}
+            </form>
+        </div>
     </div>
 </div>
 @endsection

@@ -35,6 +35,18 @@
                         pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*" title="No se aceptan caracteres especiales o numeros">
                 </div>
                 <div class="6u 12u$(xsmall)">
+                    <div class="select-wrapper">
+                        <select name="genero" id="genero" required value="{{$libro->edicion}}>
+                            <option value="">- Genero -</option>
+                            <option value="Matemáticas">Matemáticas</option>
+                            <option value="Ficcion">Ciencia Ficción</option>
+                            <option value="Terror">Terror</option>
+                            <option value="Programacion">Programación</option>
+                            <option value="Finanzas">Finanzas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="6u 12u$(xsmall)">
                     <label for="">Edición: </label>
                     <input type="text" class="textbox" name="edicion" id="edicion" value="{{$libro->edicion}}"
                         pattern="[0-9]*" title="Solo se aceptan numeros">

@@ -15,6 +15,9 @@
         <h2>Editar libro</h2>
         <p>Informacion del libro <strong>{{$libro->titulo}}</strong> para editar</p>
     </header>
+
+    <a href="{{URL::action('LibroController@show',$libro->id_libro)}}" style="color:black"><button class="button2">
+                Volver</button></a>
     <div class="center">
         <form method="POST" action="/biblioteca/{{ $libro->id_libro }}">
         {{ csrf_field() }}
@@ -61,8 +64,7 @@
                 </div>
                 <ul class="actions">
                     <li><input type="submit" class="button special" value="Guardar" /></li>
-                    <a href="{{URL::action('LibroController@show',$libro->id_libro)}}" style="color:black"><button class="alt">
-                Regresar</button></a>
+                    <li><input type="reset" value="Limpiar" class="alt" /></li>
                 </ul>
             </div>
         </form>

@@ -47,21 +47,19 @@ class LibroController extends Controller
         $lib->resena = $request->get('resena');
         $lib->imagen = $request->get('imagen');
 
-        
 
-        //$v = Validator::make($request->all(), [
-          //'imagen' => 'mimes:jpeg,png,jpg'
-        //]);
+        $v = Validator::make($request->all(), [
+          'imagen' => 'mimes:jpeg,png,jpg'
+        ]);
         
-        //if ($v->fails())
-        //{
-          //  return back()->withErrors(['imagen' => ['Selecciona un archivo con formato jpg, png o jpeg']]);
+        if ($v->fails())
+        {
+            return back()->withErrors(['imagen' => ['Selecciona un archivo con formato jpg, png o jpeg']]);
             //return back()->withErrors('error','Item created successfully!');
-        //}
+        }
         $lib->save();
         $libros = Libro::all();
         return view('biblioteca.index')->with('libros', $libros);
-        
     }
 
     /**

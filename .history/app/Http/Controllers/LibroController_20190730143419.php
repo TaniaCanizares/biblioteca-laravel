@@ -47,7 +47,6 @@ class LibroController extends Controller
         $lib->resena = $request->get('resena');
         $lib->imagen = $request->get('imagen');
 
-        
 
         //$v = Validator::make($request->all(), [
           //'imagen' => 'mimes:jpeg,png,jpg'
@@ -60,8 +59,7 @@ class LibroController extends Controller
         //}
         $lib->save();
         $libros = Libro::all();
-        return view('biblioteca.index')->with('libros', $libros);
-        
+        return view('layouts.main')->with('libros', $libros);
     }
 
     /**

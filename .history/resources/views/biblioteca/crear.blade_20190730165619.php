@@ -9,7 +9,7 @@
     </header>
     <div class="center">
         	
-    {!!Form::open(['route'=>'biblioteca.store','method'=>'POST','autocomplete'=>'off'])!!}
+        <form method="GET" action="/biblioteca/store">
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
                     <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" required/>
@@ -57,7 +57,7 @@
                     <li><input type="reset" value="Limpiar" class="alt" /></li>
                 </ul>
             </div>
-        {!!Form::close()!!}
+        </form>
     </div>
 </div>
 @endsection
