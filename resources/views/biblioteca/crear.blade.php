@@ -12,11 +12,12 @@
     {!!Form::open(['route'=>'biblioteca.store','method'=>'POST','autocomplete'=>'off'])!!}
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
-                    <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" required/>
+                    <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" 
+                    pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]*" title="No se aceptan caracteres especiales" required/>
                 </div>
                 <div class="6u$ 12u$(xsmall)">
                     <input type="text" name="autor" id="autor" value="" placeholder="Autor" required
-                    pattern="[a-zA-Z\s]*" title="Ingresa letras"/>
+                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*" title="Ingresa letras"/>
                 </div>
                 <!-- Break -->
                 <div class="6u 12u$(xsmall)">
@@ -46,7 +47,7 @@
                 </div>               
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="resena" id="resena" value="" placeholder="Ingresa una breve reseña"
-                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.;,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
                 </div>
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="imagen" id="imagen" value="" placeholder="Ingresa la url de la imagen"

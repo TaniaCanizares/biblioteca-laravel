@@ -52,7 +52,7 @@
                 <div class="6u 12u$(xsmall)">
                     <label for="">Reseña: </label>
                     <input type="text" class="textbox" name="resena" id="resena" value="{{$libro->resena}}"
-                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.;,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
                 </div>
                 <div class="6u 12u$(xsmall)">
                     <label for="">Url imagen: </label>
