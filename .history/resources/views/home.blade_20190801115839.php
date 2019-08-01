@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img src="/images/unicauca.jpg" style="display: block; margin: 0 auto;max-width: 100%; width: 80%;">
+
                 </div>
             </div>
         </div>

@@ -15,6 +15,10 @@
         <p>Libros que se encuentran en el stock</p>
     </header>
     <div class="flex flex-4">
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
         @foreach ($libros as $lib)
         <div class="box alt">
             <div class="image fit">
@@ -27,6 +31,7 @@
             </footer>
         </div>
     @endforeach
+    @endif
     </div>
 </div>
 @endsection

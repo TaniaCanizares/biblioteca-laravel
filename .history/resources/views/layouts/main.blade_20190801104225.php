@@ -18,6 +18,8 @@
 </head>
 
 <body class="subpage">
+
+	
 <!-- Header -->
 <header id="header">
 	<div class="inner">
@@ -26,7 +28,7 @@
 		@guest
 			<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 			@if (Route::has('register'))
-				<a class="nav-link" href="{{ route('register') }}">{{ __('Registro') }}</a>
+				<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 			@endif
 			@else
 				<a href="{{URL::action('LibroController@index')}}">Lista de Libros</a>

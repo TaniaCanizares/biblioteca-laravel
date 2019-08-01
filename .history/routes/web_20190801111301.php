@@ -22,5 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/biblioteca/{id}', 'LibroController@update');
 Route::delete('/users/{id}', 'LibroController@destoy');
 // Route::get('/biblioteca/{id}/edit', 'LibroController@edit');
-Route::resource('/biblioteca','LibroController');
+Route::resource('/biblioteca','LibroController@index');
 Route::post('/biblioteca/create','LibroController@store');

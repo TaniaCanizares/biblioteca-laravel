@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Biblioteca on-line Unicauca</div>
+                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,7 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img src="/images/unicauca.jpg" style="display: block; margin: 0 auto;max-width: 100%; width: 80%;">
+
+                    @extends('biblioteca.index')
                 </div>
             </div>
         </div>

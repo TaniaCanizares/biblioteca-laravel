@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
        $libros = Libro::all();
-        return view('biblioteca.index')->with('libros', $libros);
+        //return view('biblioteca.index')->with('libros', $libros);
+        return view('home')->with('libros', $libros);
     }
 }

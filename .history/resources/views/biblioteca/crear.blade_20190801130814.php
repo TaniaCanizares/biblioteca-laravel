@@ -29,7 +29,6 @@
                             <option value="Terror">Terror</option>
                             <option value="Programacion">Programación</option>
                             <option value="Finanzas">Finanzas</option>
-                            <option value="Historia">Historia</option>
                         </select>
                     </div>
                 </div>

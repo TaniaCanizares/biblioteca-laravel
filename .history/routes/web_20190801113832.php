@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('biblioteca.index');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/biblioteca', 'HomeController@index')->name('home');
 
 Route::post('/biblioteca/{id}', 'LibroController@update');
 Route::delete('/users/{id}', 'LibroController@destoy');

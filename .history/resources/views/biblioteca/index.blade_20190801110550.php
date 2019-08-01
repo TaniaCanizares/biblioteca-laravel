@@ -15,7 +15,7 @@
         <p>Libros que se encuentran en el stock</p>
     </header>
     <div class="flex flex-4">
-        @foreach ($libros as $lib)
+    @foreach ($libros as $lib)
         <div class="box alt">
             <div class="image fit">
                 <img src="{{$lib->imagen}}" alt="4">

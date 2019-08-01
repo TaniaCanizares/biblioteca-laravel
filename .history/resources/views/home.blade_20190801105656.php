@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Biblioteca on-line Unicauca</div>
+                <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,7 +13,19 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <img src="/images/unicauca.jpg" style="display: block; margin: 0 auto;max-width: 100%; width: 80%;">
+
+                    @foreach ($libros as $lib)
+        <div class="box alt">
+            <div class="image fit">
+                <img src="{{$lib->imagen}}" alt="4">
+            </div>
+            <h3>{{ $lib->titulo }}</h3>
+            <p>{{ $lib->autor }}</p>
+            <footer>
+            <a href="{{URL::action('LibroController@show',$lib->id_libro)}}" class="button special">Ver Detalle</a>
+            </footer>
+        </div>
+    @endforeach
                 </div>
             </div>
         </div>

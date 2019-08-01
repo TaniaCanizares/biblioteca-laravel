@@ -1,20 +1,15 @@
 @extends('layouts.main')
 
-@section('title', 'Lista de Libros')
-
-<!-- @section('Nombre_Pagina')
-<header>
-    <h2>Ipsum Feugiat</h2>
-    <p>Semper suscipit posuere apede</p>
-</header> -->
-
 @section('content')
-<div class="inner">
-    <header>
-        <h2>Biblioteca</h2>
-        <p>Libros que se encuentran en el stock</p>
-    </header>
-    <div class="flex flex-4">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
         @foreach ($libros as $lib)
         <div class="box alt">
             <div class="image fit">
@@ -27,6 +22,8 @@
             </footer>
         </div>
     @endforeach
+
+        </div>
     </div>
 </div>
 @endsection

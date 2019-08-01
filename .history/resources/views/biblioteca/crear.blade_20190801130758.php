@@ -29,7 +29,6 @@
                             <option value="Terror">Terror</option>
                             <option value="Programacion">Programación</option>
                             <option value="Finanzas">Finanzas</option>
-                            <option value="Historia">Historia</option>
                         </select>
                     </div>
                 </div>
@@ -52,7 +51,7 @@
                 </div>
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="imagen" id="imagen" value="" placeholder="Ingresa la url de la imagen"
-                    pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s/._-]*" title="No se aceptan caracteres especiales">
+                        pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s/._-]*" title="No se aceptan caracteres especiales">
                 </div>
                 <ul class="actions">
                     <li><input type="submit" class="button special" value="Guardar" /></li>

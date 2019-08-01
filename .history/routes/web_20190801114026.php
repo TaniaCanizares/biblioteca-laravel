@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'LibroController');
 
 Route::post('/biblioteca/{id}', 'LibroController@update');
 Route::delete('/users/{id}', 'LibroController@destoy');
