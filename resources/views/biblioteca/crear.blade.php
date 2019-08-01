@@ -12,6 +12,7 @@
     {!!Form::open(['route'=>'biblioteca.store','method'=>'POST','autocomplete'=>'off'])!!}
             <div class="row uniform">
                 <div class="6u 12u$(xsmall)">
+<<<<<<< HEAD
                     <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" required 
                     pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]*" title="No se aceptan caracteres especiales"/>
                 </div>
@@ -23,6 +24,13 @@
                 </div>
                 <div class="6u$ 12u$(xsmall)">
                     <input type="text" name="autor" id="autor" value="" placeholder="Autor" required
+=======
+                    <input type="text" name="titulo" id="titulo" value="" placeholder="Título del libro" 
+                    pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s]*" title="No se aceptan caracteres especiales" required/>
+                </div>
+                <div class="6u$ 12u$(xsmall)">
+                    <input type="text" name="autor" id="autor" value="" placeholder="Autor" required
+>>>>>>> 92286974b175cf0e294b34dc45ee6cba2c13af1a
                     pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]*" title="Ingresa letras"/>
                 </div>
                 <!-- Break -->
@@ -54,7 +62,10 @@
                 </div>               
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="resena" id="resena" value="" placeholder="Ingresa una breve reseña"
+<<<<<<< HEAD
                     pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.;,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+=======
+>>>>>>> 92286974b175cf0e294b34dc45ee6cba2c13af1a
                         pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
                 </div>
                 <div class="6u 12u$(xsmall)">
