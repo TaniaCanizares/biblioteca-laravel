@@ -54,8 +54,11 @@
                 </div>               
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="resena" id="resena" value="" placeholder="Ingresa una breve reseña"
+<<<<<<< HEAD
                     pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.;,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+=======
                         pattern="[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ\s.,:-]*" title="No se aceptan caracteres especiales, solo puntuaciones como .,;">
+>>>>>>> 92286974b175cf0e294b34dc45ee6cba2c13af1a
                 </div>
                 <div class="6u 12u$(xsmall)">
                     <input type="text" class="textbox" name="imagen" id="imagen" value="" placeholder="Ingresa la url de la imagen"
